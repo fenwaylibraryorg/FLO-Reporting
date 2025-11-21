@@ -1,0 +1,19 @@
+{
+    "displayName": "Lost items by date lost with patron information",
+    "description": "Lost items by date lost with patron information",
+    "instructions": "Choose a start and end date for the date item lost.",
+    "parameters": [
+        {
+            "name": "start_date",
+            "displayName": "Earliest date of lost status",
+            "type": "date",
+            "required": false
+        },
+        {
+            "name": "end_date",
+            "displayName": "Latest date of lost status",
+            "type": "date",
+            "required": false
+        }
+    ]
+}
