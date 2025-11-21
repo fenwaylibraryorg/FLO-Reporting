@@ -1,7 +1,7 @@
 {
     "displayName": "Lost items by date lost with patron information",
     "description": "Lost items by date lost with patron information",
-    "instructions": "Choose a start and end date for the date item lost.",
+    "instructions": "Choose a start and end date for the date item lost. Leave dates blank to see all lost items.",
     "parameters": [
         {
             "name": "start_date",
