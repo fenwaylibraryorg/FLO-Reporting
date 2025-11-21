@@ -1,0 +1,19 @@
+{
+    "displayName": "Circ counts by location",
+    "description": "Counts all checkouts and renewals by location in a date range",
+    "instructions": "Choose a start and end date for the circ period.",
+    "parameters": [
+        {
+            "name": "start_date",
+            "displayName": "Earliest date of user creation",
+            "type": "date",
+            "required": false
+        },
+        {
+            "name": "end_date",
+            "displayName": "Latest date of user creation",
+            "type": "date",
+            "required": false
+        }
+    ]
+}
