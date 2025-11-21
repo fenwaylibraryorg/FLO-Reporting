@@ -1,0 +1,19 @@
+{
+    "displayName": "Items Aged to Lost by Date",
+    "description": "Items aged to lost by date (includes user info)",
+    "instructions": "Choose a start and end date for aged to lost status",
+    "parameters": [
+        {
+            "name": "start_date",
+            "displayName": "Earliest status date",
+            "type": "date",
+            "required": false
+        },
+        {
+            "name": "end_date",
+            "displayName": "Latest status date",
+            "type": "date",
+            "required": false
+        }
+    ]
+}
