@@ -14,11 +14,11 @@ RETURNS TABLE(
   user_first_name text,
   user_last_name text,
   username text,
-  barcode text,
+  user_barcode text,
   group_description text
   )
 AS $$
-select it2.title, ie.barcode, lt.due_date, ie.status_name, ie.status_date::timestamptz, ug.user_first_name, ug.user_last_name, ug.username, ug.barcode, ug.group_description 
+select it2.title, ie.barcode, lt.due_date, ie.status_name, ie.status_date::timestamptz, ug.user_first_name, ug.user_last_name, ug.username, ug.barcode as user_barcode, ug.group_description 
 from folio_circulation.loan__t lt
   left join folio_derived.item_ext ie ON (ie.item_id = lt.item_id)
   left join folio_derived.users_groups ug on (ug.user_id = lt.user_id)
