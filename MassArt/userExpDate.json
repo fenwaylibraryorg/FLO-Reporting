@@ -1,0 +1,13 @@
+{
+    "displayName": "User expiration info by group",
+    "description": "User expiration information by user group",
+    "instructions": "Plug in a user group to get list of user info (Options: Alum, Cont. Ed. Student, Faculty, Graduate Student, ILL, Library Use, MassArt Friend, Staff, Student)",
+    "parameters": [
+        {
+            "name": "user_group",
+            "displayName": "User Group",
+            "type": "text",
+            "required": true
+        }
+    ]
+}
