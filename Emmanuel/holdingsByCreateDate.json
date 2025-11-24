@@ -1,0 +1,19 @@
+{
+    "displayName": "List of holdings records by create date",
+    "description": "List of holdings records by create date",
+    "instructions": "Choose a start and end date for the holdings-creation period.",
+    "parameters": [
+        {
+            "name": "start_date",
+            "displayName": "Earliest date of holdings record creation",
+            "type": "date",
+            "required": false
+        },
+        {
+            "name": "end_date",
+            "displayName": "Latest date of holdings record creation",
+            "type": "date",
+            "required": false
+        }
+    ]
+}
