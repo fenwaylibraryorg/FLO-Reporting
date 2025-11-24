@@ -39,7 +39,7 @@ left join folio_inventory.location__t__ lt on (hrt.permanent_location_id = lt.id
 left join folio_inventory.instance__t it on (hrt.instance_id = it.id)
 left join inst_contributors ic2 on (it.id = ic2.instance_id)
 left join inst_publishers ip2 on (it.id = ip2.instance_id)
-where hrt.call_number like 'TR%' and hrt.created_date between start_date and end_date
+where hrt.call_number like 'TR%' and hrt.created_date::date between start_date and end_date
 $$
 LANGUAGE SQL
 STABLE
