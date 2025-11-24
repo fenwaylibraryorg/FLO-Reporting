@@ -8,7 +8,7 @@ RETURNS TABLE
   user_first_name text,
   username text,
   group_name text,
-  loan_due_date timestamptz,
+  loan_due_date date,
  )
 AS $$
 select 
