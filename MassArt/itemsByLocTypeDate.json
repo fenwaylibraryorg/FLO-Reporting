@@ -1,0 +1,19 @@
+{
+    "displayName": "Count of items by type, location, create date",
+    "description": "Count of items by material type, location, create date",
+    "instructions": "Choose a start and end date for the item-creation period.",
+    "parameters": [
+        {
+            "name": "start_date",
+            "displayName": "Earliest date of item creation",
+            "type": "date",
+            "required": false
+        },
+        {
+            "name": "end_date",
+            "displayName": "Latest date of item creation",
+            "type": "date",
+            "required": false
+        }
+    ]
+}
