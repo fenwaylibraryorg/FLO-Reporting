@@ -12,7 +12,7 @@ RETURNS TABLE(
   user_first_name text,
   user_last_name text,
   username text,
-  barcode text,
+  user_barcode text,
   group_description text
   )
 AS $$
@@ -23,7 +23,7 @@ select
 	ug.user_first_name,
 	ug.user_last_name,
 	ug.username,
-	ug.barcode,
+	ug.barcode as user_barcode,
 	ug.group_description
 from
 	folio_circulation.loan__t lt
