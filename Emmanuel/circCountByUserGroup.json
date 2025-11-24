@@ -1,0 +1,19 @@
+{
+    "displayName": "Circ counts by user group",
+    "description": "Circ counts by user group in a date range",
+    "instructions": "Choose a start and end date for the loan period.",
+    "parameters": [
+        {
+            "name": "start_date",
+            "displayName": "Start date of loan period",
+            "type": "date",
+            "required": false
+        },
+        {
+            "name": "end_date",
+            "displayName": "End date of loan period",
+            "type": "date",
+            "required": false
+        }
+    ]
+}
