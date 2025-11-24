@@ -1,0 +1,6 @@
+{
+    "displayName": "Microform Records",
+    "description": "Records that either have 'micro-film/form/fiche' in their 300 subfield a or have a material type of 'Microform' or 'Microfilm'",
+    "instructions": "",
+    "parameters": []
+}
