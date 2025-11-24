@@ -1,0 +1,19 @@
+{
+    "displayName": "Weeding Candidates (No Circ)",
+    "description": "Items that have never circulated in Voyager or FOLIO",
+    "instructions": "Choose a call number range",
+    "parameters": [
+        {
+            "name": "start_call_no",
+            "displayName": "Start of call number range",
+            "type": "text",
+            "required": false
+        },
+        {
+            "name": "end_call_no",
+            "displayName": "End of call number range",
+            "type": "text",
+            "required": false
+        }
+    ]
+}
