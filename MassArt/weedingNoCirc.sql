@@ -3,8 +3,8 @@
 DROP FUNCTION IF EXISTS weedingNoCirc;
 
 CREATE FUNCTION weedingNoCirc(
-    start_call_no text DEFAULT 'A',
-    end_call_no text DEFAULT 'Z')
+    start_call_no text DEFAULT '',
+    end_call_no text DEFAULT '')
 RETURNS TABLE(
     title text,
     barcode text,
