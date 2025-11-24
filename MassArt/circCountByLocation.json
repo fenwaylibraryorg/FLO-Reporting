@@ -1,7 +1,7 @@
 {
     "displayName": "Circ Counts by Location",
     "description": "Circulation counts (FOLIO and Voyager) by location",
-    "instructions": "Plug in a shelving location to get circ stats",
+    "instructions": "Plug in a shelving location to get circ stats (Options: Archives, Artists' Books, Audio, Circulation, Comcat, Econtent, Film/Video Vault, FLO ILL, Folios, Main Stacks, Media, Oversized, Periodicals, Reference, Reserves, ReShare, Spec Col Oversize, Spec. Collections, Streaming Media, Tech Services)",
     "parameters": [
         {
             "name": "shelving_location",
