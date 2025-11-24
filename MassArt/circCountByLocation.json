@@ -1,0 +1,13 @@
+{
+    "displayName": "Circ Counts by Location",
+    "description": "Circulation counts (FOLIO and Voyager) by location",
+    "instructions": "Plug in a shelving location to get circ stats",
+    "parameters": [
+        {
+            "name": "shelving_location",
+            "displayName": "Shelving Location",
+            "type": "text",
+            "required": true
+        }
+    ]
+}
