@@ -8,7 +8,7 @@ RETURNS TABLE
   user_first_name text,
   username text,
   group_name text,
-  loan_due_date date,
+  loan_due_date timestamptz,
  )
 AS $$
 select 
@@ -16,7 +16,7 @@ select
   ug.user_first_name, 
   ug.username,
   ug.group_name,
-  li.loan_due_date::date
+  li.loan_due_date
   from
   folio_derived.loans_items li
   left join folio_derived.users_groups ug on (li.user_id = ug.user_id) 
