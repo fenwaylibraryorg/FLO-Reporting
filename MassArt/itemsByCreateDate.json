@@ -1,0 +1,19 @@
+{
+    "displayName": "List of items by create date",
+    "description": "Items by date created with staff info",
+    "instructions": "Choose a start and end date for the item-creation period.",
+    "parameters": [
+        {
+            "name": "start_date",
+            "displayName": "Earliest date of item creation",
+            "type": "date",
+            "required": false
+        },
+        {
+            "name": "end_date",
+            "displayName": "Latest date of item creation",
+            "type": "date",
+            "required": false
+        }
+    ]
+}
