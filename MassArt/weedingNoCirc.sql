@@ -16,7 +16,7 @@ RETURNS TABLE(
   effective_location_name text,
   created_date timestamptz,
   folio_charges integer,
-  voyager_charges integer
+  voyager_charges text
   )
 AS $$
 with inst_contributors as (
