@@ -1,0 +1,19 @@
+{
+    "displayName": "Title List (TR call no. range)",
+    "description": "List of titles with a call no. beginning 'TR'",
+    "instructions": "Choose a start and end date for the holdings-creation period.",
+    "parameters": [
+        {
+            "name": "start_date",
+            "displayName": "Earliest date of holdings record creation",
+            "type": "date",
+            "required": false
+        },
+        {
+            "name": "end_date",
+            "displayName": "Latest date of holdings creation",
+            "type": "date",
+            "required": false
+        }
+    ]
+}
