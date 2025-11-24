@@ -1,0 +1,19 @@
+{
+    "displayName": "Overdue items by due date",
+    "description": "Overdue items within due date period",
+    "instructions": "Choose a start and end date for the due date period.",
+    "parameters": [
+        {
+            "name": "start_date",
+            "displayName": "Earliest due date",
+            "type": "date",
+            "required": false
+        },
+        {
+            "name": "end_date",
+            "displayName": "Latest due date",
+            "type": "date",
+            "required": false
+        }
+    ]
+}
