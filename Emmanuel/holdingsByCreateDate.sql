@@ -47,3 +47,7 @@ where
 	h.creation_date between start_date and end_date
 order by
 	hrt.hrid;
+$$
+LANGUAGE SQL
+STABLE
+PARALLEL SAFE;
