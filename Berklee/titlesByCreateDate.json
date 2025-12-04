@@ -1,0 +1,19 @@
+{
+    "displayName": "Items by create date (with title info)",
+    "description": "Items by create date (with title info)",
+    "instructions": "Choose a start and end date for the item creation period.",
+    "parameters": [
+        {
+            "name": "start_date",
+            "displayName": "Earliest checkout date",
+            "type": "date",
+            "required": false
+        },
+        {
+            "name": "end_date",
+            "displayName": "Latest checkout date",
+            "type": "date",
+            "required": false
+        }
+    ]
+}
