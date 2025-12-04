@@ -13,7 +13,7 @@ RETURNS TABLE
   copy_number text,
   title text,
   author text,
-  bib_num,
+  bib_num text,
   opac_url text,
   barcode text,
   due_date timestamptz,
