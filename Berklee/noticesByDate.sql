@@ -10,11 +10,11 @@ RETURNS TABLE
   notice_type text,
   notice_count integer)
 AS $$
-select est.date::date as date_sent, est."header" as notice_type, count(est.id) as notice_count
+select cast(est.date as date) as "date sent", est."header" as "notice type", count(est.id)
 from folio_email.email_statistics__t__ est
-where est.date::date between start_date and end_date
-group by est.date::date, est."header"
-order by est.date::date, est."header"
+where cast(est.date as date) between '2025-12-01' and '2025-12-04'
+group by cast(est.date as date), est."header"
+order by cast(est.date as date), est."header"
 $$
 LANGUAGE SQL
 STABLE
