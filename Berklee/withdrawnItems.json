@@ -1,0 +1,6 @@
+{
+    "displayName": "List of withdrawn items",
+    "description": "List of withdrawn items (items with a status of 'withdrawn')",
+    "instructions": "",
+    "parameters": []
+}
