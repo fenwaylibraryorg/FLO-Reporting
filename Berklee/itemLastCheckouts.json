@@ -1,0 +1,13 @@
+{
+    "displayName": "Item Last 3 Checkouts",
+    "description": "The last 3 checkouts for a given barcode",
+    "instructions": "Enter a valid item barcode",
+    "parameters": [
+        {
+            "name": "item_barcode",
+            "displayName": "Item Barcode",
+            "type": "text",
+            "required": true
+        }
+    ]
+}
