@@ -1,0 +1,19 @@
+{
+    "displayName": "Count of notices sent by date range (with notice type)",
+    "description": "Count of notices by date range (with notice type)",
+    "instructions": "Choose a start and end date for the notice period.",
+    "parameters": [
+        {
+            "name": "start_date",
+            "displayName": "Earliest notice date",
+            "type": "date",
+            "required": false
+        },
+        {
+            "name": "end_date",
+            "displayName": "Latest notice date",
+            "type": "date",
+            "required": false
+        }
+    ]
+}
