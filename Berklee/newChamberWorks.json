@@ -1,0 +1,19 @@
+{
+    "displayName": "New chamber works",
+    "description": "Instances by create date with SETPT collection code in attached item(s)",
+    "instructions": "Choose a start and end date for the instance-creation period.",
+    "parameters": [
+        {
+            "name": "start_date",
+            "displayName": "Earliest date of item creation",
+            "type": "date",
+            "required": false
+        },
+        {
+            "name": "end_date",
+            "displayName": "Latest date of item creation",
+            "type": "date",
+            "required": false
+        }
+    ]
+}
