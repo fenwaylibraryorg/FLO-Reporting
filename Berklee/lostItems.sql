@@ -31,7 +31,7 @@ total_loans as
   from folio_circulation.loan
   group by item_id
   )
-select lib.name as home_library, lt.name as perm_location, ie.effective_location_name, ie.material_type_name, ie.effective_call_number, ie.barcode, ic2.contributor_name, it.title, tl.loans as loan_count, ie.status_name, ie.status_date as lost_date 
+select distinct lib.name as home_library, lt.name as perm_location, ie.effective_location_name, ie.material_type_name, ie.effective_call_number, ie.barcode, ic2.contributor_name, it.title, tl.loans as loan_count, ie.status_name, ie.status_date as lost_date 
 from folio_derived.item_ext ie
 left join folio_inventory.holdings_record__t hrt on (ie.holdings_record_id = hrt.id)
 left join folio_inventory.location__t__ lt on (hrt.permanent_location_id = lt.id)
