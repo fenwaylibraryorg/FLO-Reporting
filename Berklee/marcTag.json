@@ -1,0 +1,13 @@
+{
+    "displayName": "MARC tag search",
+    "description": "Holdings by MARC tag",
+    "instructions": "Plug in a MARC field (ex. 856)",
+    "parameters": [
+        {
+            "name": "marc_tag",
+            "displayName": "MARC tag",
+            "type": "text",
+            "required": true
+        }
+    ]
+}
