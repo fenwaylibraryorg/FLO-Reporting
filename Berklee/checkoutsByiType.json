@@ -1,0 +1,19 @@
+{
+    "displayName": "Count of checkouts by material type and date range",
+    "description": "Count of checkouts by material type and date range",
+    "instructions": "Choose a start and end date for the loan period.",
+    "parameters": [
+        {
+            "name": "start_date",
+            "displayName": "Earliest notice date",
+            "type": "date",
+            "required": false
+        },
+        {
+            "name": "end_date",
+            "displayName": "Latest notice date",
+            "type": "date",
+            "required": false
+        }
+    ]
+}
