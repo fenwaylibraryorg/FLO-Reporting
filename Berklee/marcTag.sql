@@ -59,3 +59,7 @@ inner join (
 	it.id = tag.instance_id
 left join folio_inventory.material_type__t mtt on
 	i.materialtypeid = mtt.id
+$$
+LANGUAGE SQL
+STABLE
+PARALLEL SAFE;
