@@ -1,0 +1,19 @@
+{
+    "displayName": "Checkouts and renewals by material type and date range",
+    "description": "Checkouts and renewals by material type and date range",
+    "instructions": "Choose a start and end date for the loan period.",
+    "parameters": [
+        {
+            "name": "start_date",
+            "displayName": "Earliest checkout/renewal date",
+            "type": "date",
+            "required": false
+        },
+        {
+            "name": "end_date",
+            "displayName": "Latest checkout/renewal date",
+            "type": "date",
+            "required": false
+        }
+    ]
+}
