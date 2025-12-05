@@ -1,0 +1,6 @@
+{
+    "displayName": "Count of loan type by shelving location",
+    "description": "Count of loan type by shelving location (excludes 'can circulate' loan type)",
+    "instructions": "",
+    "parameters": []
+}
