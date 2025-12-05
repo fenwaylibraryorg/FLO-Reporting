@@ -1,0 +1,19 @@
+{
+    "displayName": "In house use (Boston libraries)",
+    "description": "In house use by material type and date range (Boston libraries)",
+    "instructions": "Choose a start and end date for the use period.",
+    "parameters": [
+        {
+            "name": "start_date",
+            "displayName": "Earliest in-house use date",
+            "type": "date",
+            "required": false
+        },
+        {
+            "name": "end_date",
+            "displayName": "Latest in-house use date",
+            "type": "date",
+            "required": false
+        }
+    ]
+}
