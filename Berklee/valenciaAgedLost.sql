@@ -17,6 +17,7 @@ RETURNS TABLE
   publisher text,
   date_of_publication text,
   instance_hrid text,
+  instance_uuid uuid,
   opac_link text,
   item_status text,
   item_status_date date, 
