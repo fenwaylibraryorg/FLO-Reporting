@@ -15,7 +15,7 @@ RETURNS TABLE
   section_name text,
   department_name text,
   start_date timestamptz,
-  end_date timestamptz
+  end_date timestamptz,
   instructor_name text,
   term_name text,
   course_type text)
