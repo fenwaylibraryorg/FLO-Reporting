@@ -1,0 +1,13 @@
+{
+    "displayName": "Lost items by status",
+    "description": "Lost items by status",
+    "instructions": "Enter lost status of Aged to lost, Missing, Declared lost, OR Claimed returned",
+    "parameters": [
+        {
+            "name": "lost_status",
+            "displayName": "lost_status",
+            "type": "text",
+            "required": true
+        }
+    ]
+}
