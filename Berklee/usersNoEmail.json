@@ -1,0 +1,6 @@
+{
+    "displayName": "Users without emails",
+    "description": "Active users without emails (excludes ComCat libraries)",
+    "instructions": "",
+    "parameters": []
+}
