@@ -1,3 +1,5 @@
+--metadb:function usersNoEmail
+
 DROP FUNCTION IF EXISTS usersNoEmail;
 
 CREATE FUNCTION usersNoEmail()
