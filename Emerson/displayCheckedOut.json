@@ -1,0 +1,19 @@
+{
+    "displayName": "Shelflist Display (Checked out by date range)",
+    "description": "Items with a temp or permanent location of "Display" checked out in a date range",
+    "instructions": "Choose a start and end date for the loan period.",
+    "parameters": [
+        {
+            "name": "start_date",
+            "displayName": "Earliest loan date",
+            "type": "date",
+            "required": false
+        },
+        {
+            "name": "end_date",
+            "displayName": "Latest loan date",
+            "type": "date",
+            "required": false
+        }
+    ]
+}
