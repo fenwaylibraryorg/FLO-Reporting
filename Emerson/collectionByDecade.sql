@@ -5,7 +5,7 @@ DROP FUNCTION IF EXISTS collectionByDecade;
 CREATE FUNCTION collectionByDecade()
 RETURNS TABLE
   (location_name text,
-  "NULL" integer,
+  No_date integer,
   "pre-1900s" integer,
   "1900s" integer,
   "1910s" integer,
@@ -21,10 +21,10 @@ RETURNS TABLE
   "2010s" integer,
   "2020s" integer)
 AS $$
-select sq.name, "NULL", "Pre-1900s", "1900s", "1910s", "1920s", "1930s", "1940s", "1950s", "1960s", "1970s", "1980s", "1990s", "2000s", "2010s", "2020s"
+select sq.name, "No_date", "Pre-1900s", "1900s", "1910s", "1920s", "1930s", "1940s", "1950s", "1960s", "1970s", "1980s", "1990s", "2000s", "2010s", "2020s"
 from (
 select lt.name as location_name,
-  count (*) filter (where ip.date_of_publication is null) as "NULL",
+  count (*) filter (where ip.date_of_publication is null) as No_date,
   count (*) filter (where left(regexp_replace(ip.date_of_publication, '[^0-9]+', '', 'g'),4) < '1900') as "Pre-1900s",
   count (*) filter (where left(regexp_replace(ip.date_of_publication, '[^0-9]+', '', 'g'),4) like '190%') as "1900s",
   count (*) filter (where left(regexp_replace(ip.date_of_publication, '[^0-9]+', '', 'g'),4) like '191%') as "1910s",
