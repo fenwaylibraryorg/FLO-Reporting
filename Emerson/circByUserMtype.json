@@ -1,6 +1,6 @@
 {
-    "displayName": "Circ counts by user group, location, and date range",
-    "description": "Count of circs by date range, shelving location, and user group",
+    "displayName": "Circ counts by user group, material type, and date range",
+    "description": "Count of circs by date range, material type, and user group",
     "instructions": "Choose a start and end date for the loan period.",
     "parameters": [
         {
