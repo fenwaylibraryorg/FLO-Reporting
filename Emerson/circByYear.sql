@@ -15,9 +15,7 @@ RETURNS TABLE(item_id uuid,
 AS $$
 select
 	distinct on
-	(it.id,
-	it2.title,
-	hrt.call_number) it.id as item_id,
+	(it.id) it.id as item_id,
 	it2.title,
 	hrt.call_number,
 	count(distinct lt.id) as loan_count,
@@ -45,7 +43,7 @@ group by
 having
 	count(distinct lt.id) >= loan_count /*enter the minimum number of loans*/
 order by
-	it.id
+	it.id, it2.title asc
 $$
 LANGUAGE SQL
 STABLE
