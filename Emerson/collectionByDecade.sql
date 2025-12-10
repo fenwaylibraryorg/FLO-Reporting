@@ -5,21 +5,21 @@ DROP FUNCTION IF EXISTS collectionByDecade;
 CREATE FUNCTION collectionByDecade()
 RETURNS TABLE
   (location_name text,
-  NULL integer,
-  pre-1900s integer,
-  1900s integer,
-  1910s integer,
-  1920s integer,
-  1930s integer,
-  1940s integer,
-  1950s integer,
-  1960s integer,
-  1970s integer,
-  1980s integer,
-  1990s integer,
-  2000s integer,
-  2010s integer,
-  2020s integer)
+  "NULL" integer,
+  "pre-1900s" integer,
+  "1900s" integer,
+  "1910s" integer,
+  "1920s" integer,
+  "1930s" integer,
+  "1940s" integer,
+  "1950s" integer,
+  "1960s" integer,
+  "1970s" integer,
+  "1980s" integer,
+  "1990s" integer,
+  "2000s" integer,
+  "2010s" integer,
+  "2020s" integer)
 AS $$
 select sq.name, "NULL", "Pre-1900s", "1900s", "1910s", "1920s", "1930s", "1940s", "1950s", "1960s", "1970s", "1980s", "1990s", "2000s", "2010s", "2020s"
 from (
