@@ -1,0 +1,6 @@
+{
+    "displayName": "Item count by publication date",
+    "description": "Item count by publication date (uses the first date in a range if there is one)",
+    "instructions": "",
+    "parameters": []
+}
