@@ -1,0 +1,25 @@
+{
+    "displayName": "Circ counts by date range and minumum count of checkouts",
+    "description": "Circ counts by date range and minumum count of checkouts",
+    "instructions": "Enter the loan period and minimum loan count (ex. everything that has been checked out 2 or more times)",
+    "parameters": [
+        {
+            "name": "start_date",
+            "displayName": "Earliest loan date",
+            "type": "date",
+            "required": false
+        },
+        {
+            "name": "end_date",
+            "displayName": "Latest loan date",
+            "type": "date",
+            "required": false
+        },
+        {
+            "name": "loan_count",
+            "displayName": "Minimum loan count",
+            "type": "integer",
+            "required": false
+        }
+    ]
+}
