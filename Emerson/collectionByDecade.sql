@@ -5,7 +5,7 @@ DROP FUNCTION IF EXISTS collectionByDecade;
 CREATE FUNCTION collectionByDecade()
 RETURNS TABLE
   (location_name text,
-  No_date integer,
+  "No_date" integer,
   "pre-1900s" integer,
   "1900s" integer,
   "1910s" integer,
