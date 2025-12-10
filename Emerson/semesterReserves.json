@@ -1,0 +1,19 @@
+{
+    "displayName": "Reserves info by semester",
+    "description": "Reserves info by semester",
+    "instructions": "Choose a start and end date for the semester.",
+    "parameters": [
+        {
+            "name": "start_date",
+            "displayName": "Earliest semester date",
+            "type": "date",
+            "required": false
+        },
+        {
+            "name": "end_date",
+            "displayName": "Latest semester date",
+            "type": "date",
+            "required": false
+        }
+    ]
+}
