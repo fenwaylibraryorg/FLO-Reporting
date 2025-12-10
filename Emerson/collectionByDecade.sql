@@ -24,7 +24,7 @@ AS $$
 select sq.name as location_name, "No_date", "Pre-1900s", "1900s", "1910s", "1920s", "1930s", "1940s", "1950s", "1960s", "1970s", "1980s", "1990s", "2000s", "2010s", "2020s"
 from (
 select lt.name,
-  count (*) filter (where ip.date_of_publication is null) as No_date,
+  count (*) filter (where ip.date_of_publication is null) as "No_date",
   count (*) filter (where left(regexp_replace(ip.date_of_publication, '[^0-9]+', '', 'g'),4) < '1900') as "Pre-1900s",
   count (*) filter (where left(regexp_replace(ip.date_of_publication, '[^0-9]+', '', 'g'),4) like '190%') as "1900s",
   count (*) filter (where left(regexp_replace(ip.date_of_publication, '[^0-9]+', '', 'g'),4) like '191%') as "1910s",
