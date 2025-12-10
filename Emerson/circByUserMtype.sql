@@ -1,8 +1,8 @@
---metadb:function circByUserLoc
+--metadb:function circByUserMtype
 
-DROP FUNCTION IF EXISTS circByUserLoc;
+DROP FUNCTION IF EXISTS circByUserMtype;
 
-CREATE FUNCTION circByUserLoc(    
+CREATE FUNCTION circByUserMtype(    
   start_date date DEFAULT '2000-01-01',
   end_date date DEFAULT '2050-01-01')
 RETURNS TABLE
