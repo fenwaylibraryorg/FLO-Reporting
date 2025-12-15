@@ -1,0 +1,19 @@
+{
+    "displayName": "Course reserves (with loan info)",
+    "description": "Course reserves (with loan information)",
+    "instructions": "Choose a start and end date for the loan period.",
+    "parameters": [
+        {
+            "name": "start_date",
+            "displayName": "Earliest loan date",
+            "type": "date",
+            "required": false
+        },
+        {
+            "name": "end_date",
+            "displayName": "Latest loan date",
+            "type": "date",
+            "required": false
+        }
+    ]
+}
