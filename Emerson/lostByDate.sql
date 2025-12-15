@@ -14,10 +14,11 @@ RETURNS TABLE
   status_name text,
   status_date text)
 AS $$
-select 
+select distinct
   t.title,
   it.barcode, 
   hrt.call_number,
+  it.effective_shelving_order,
   lt2.name as shelving_location,
   mtt.name as material_type,
   jsonb_extract_path_text(i.jsonb, 'status', 'name') AS status_name,
