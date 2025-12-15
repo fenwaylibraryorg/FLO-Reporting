@@ -1,0 +1,19 @@
+{
+    "displayName": "Lost and missing items by date",
+    "description": "Lost and missing items by status date",
+    "instructions": "Choose a start and end date for the status period",
+    "parameters": [
+        {
+            "name": "start_date",
+            "displayName": "Earliest status date",
+            "type": "date",
+            "required": false
+        },
+        {
+            "name": "end_date",
+            "displayName": "Latest status date",
+            "type": "date",
+            "required": false
+        }
+    ]
+}
