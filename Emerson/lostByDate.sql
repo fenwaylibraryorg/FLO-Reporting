@@ -33,7 +33,7 @@ select
   where 
   jsonb_extract_path_text(i.jsonb, 'status', 'name') in ('Missing', 'Aged to lost', 'Declared lost', 'Restricted')
   and
-  jsonb_extract_path_text(i.jsonb, 'status', 'date') between start_date and end_date 
+  jsonb_extract_path_text(i.jsonb, 'status', 'date')::date between start_date and end_date 
   order by it.effective_shelving_order
 $$
 LANGUAGE SQL
