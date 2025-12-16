@@ -1,0 +1,19 @@
+{
+    "displayName": "New e-resources by date range",
+    "description": "New e-resources by date range",
+    "instructions": "Enter 008 dates in this format YYMMDD",
+    "parameters": [
+        {
+            "name": "start_date",
+            "displayName": "Start date (008)",
+            "type": "text",
+            "required": true
+        },
+              {
+            "name": "end_date",
+            "displayName": "End date (008)",
+            "type": "text",
+            "required": true
+        }
+    ]
+}
