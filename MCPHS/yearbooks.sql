@@ -24,7 +24,7 @@ from
 left join instance_ext ie on
 	(he.instance_id = ie.instance_id)
 left join item_ext ie2 on
-	(holdings_id = ie2.holdings_record_id)
+	(he.holdings_id = ie2.holdings_record_id)
 where
 	ie.instance_hrid = 'p401936'
 	or ie.instance_hrid = 'p403810'
