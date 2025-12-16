@@ -1,0 +1,19 @@
+{
+    "displayName": "In house use by library",
+    "description": "In house use by library and date range",
+    "instructions": "Choose a start and end date for use period.",
+    "parameters": [
+        {
+            "name": "start_date",
+            "displayName": "Earliest date of use period",
+            "type": "date",
+            "required": false
+        },
+        {
+            "name": "end_date",
+            "displayName": "Latest date of use period",
+            "type": "date",
+            "required": false
+        }
+    ]
+}
