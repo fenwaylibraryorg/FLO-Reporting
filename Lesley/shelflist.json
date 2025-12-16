@@ -1,0 +1,19 @@
+{
+    "displayName": "Shelflist by call number range",
+    "description": "Shelflist by call number range",
+    "instructions": "Enter a call number range (ex. B to BZ)",
+    "parameters": [
+        {
+            "name": "start_cn_range",
+            "displayName": "Start call number range",
+            "type": "text",
+            "required": true
+        },
+              {
+            "name": "end_cn_date",
+            "displayName": "End call number range",
+            "type": "text",
+            "required": true
+        }
+    ]
+}
