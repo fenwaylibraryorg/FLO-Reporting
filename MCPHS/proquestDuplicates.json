@@ -1,0 +1,6 @@
+{
+    "displayName": "Proquest duplicates",
+    "description": "Duplicate Proquest holdings (based on URIs that appear in more than one record)",
+    "instructions": "",
+    "parameters": []
+}
