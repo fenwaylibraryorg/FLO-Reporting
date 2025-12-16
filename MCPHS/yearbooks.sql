@@ -20,10 +20,10 @@ select
 	he.permanent_location_name,
 	ie2.barcode
 from
-	holdings_ext he
-left join instance_ext ie on
+	folio_derived.holdings_ext he
+left join folio_derived.instance_ext ie on
 	(he.instance_id = ie.instance_id)
-left join item_ext ie2 on
+left join folio_derived.item_ext ie2 on
 	(he.holdings_id = ie2.holdings_record_id)
 where
 	ie.instance_hrid = 'p401936'
