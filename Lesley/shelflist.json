@@ -10,7 +10,7 @@
             "required": true
         },
               {
-            "name": "end_cn_date",
+            "name": "end_cn_range",
             "displayName": "End call number range",
             "type": "text",
             "required": true
