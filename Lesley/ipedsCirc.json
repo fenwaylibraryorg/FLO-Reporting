@@ -1,0 +1,19 @@
+{
+    "displayName": "IPEDS circ count",
+    "description": "Count of checkouts by date range",
+    "instructions": "Choose a start and end date for the loan period",
+    "parameters": [
+        {
+            "name": "start_date",
+            "displayName": "Earliest checkout date",
+            "type": "date",
+            "required": false
+        },
+        {
+            "name": "end_date",
+            "displayName": "Latest checkout date",
+            "type": "date",
+            "required": false
+        }
+    ]
+}
