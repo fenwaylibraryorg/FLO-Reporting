@@ -32,7 +32,7 @@ where
 	or ie.instance_hrid = 'p1317749'
 	or ie.instance_hrid = 'p402232'
 order by
-	he.call_number;
+	he.call_number
   $$
 LANGUAGE SQL
 STABLE
