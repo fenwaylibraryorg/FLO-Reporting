@@ -1,0 +1,19 @@
+{
+    "displayName": "Count of items created within date range",
+    "description": "Count of items created within date range (does not include deleted items)",
+    "instructions": "Choose a start and end date for the item creation period.",
+    "parameters": [
+        {
+            "name": "start_date",
+            "displayName": "Earliest create date",
+            "type": "date",
+            "required": false
+        },
+        {
+            "name": "end_date",
+            "displayName": "Latest create date",
+            "type": "date",
+            "required": false
+        }
+    ]
+}
