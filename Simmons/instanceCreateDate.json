@@ -1,0 +1,19 @@
+{
+    "displayName": "Count of instances created within date range",
+    "description": "Count of instances created within date range (does not include deleted instances)",
+    "instructions": "Choose a start and end date for the loan period.",
+    "parameters": [
+        {
+            "name": "start_date",
+            "displayName": "Earliest create date",
+            "type": "date",
+            "required": false
+        },
+        {
+            "name": "end_date",
+            "displayName": "Latest create date",
+            "type": "date",
+            "required": false
+        }
+    ]
+}
