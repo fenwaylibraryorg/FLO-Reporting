@@ -28,10 +28,10 @@ left join folio_inventory.item__t it on
 left join folio_inventory.material_type__t mtt on
 	(mtt.id = it.material_type_id)
 where
-	lt.loan_date between start_date and end_date /*dates start and end dates*/
-	and lt.action like 'checkedout'
+	(lt.loan_date between start_date and end_date) /*dates start and end dates*/
+	and (lt.action like 'checkedout'
 	or lt.action like 'checkedOut%'
-	or lt.action like 'dueDate%'
+	or lt.action like 'dueDate%')
 group by
 	gt.group,
 	mtt.name,
