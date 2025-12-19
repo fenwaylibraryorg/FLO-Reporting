@@ -31,9 +31,9 @@ left join folio_derived.instance_publication ip on
 left join folio_circulation.loan__t__ lt on
 	(it.id = lt.item_id)
 where
-	loan_date BETWEEN start_date and end_date
-	and it.temporary_location_id != '02676066-4175-402e-884f-9bb1fc51fc2a'
-	or it.temporary_location_id is null 
+	(loan_date BETWEEN start_date and end_date)
+	and (it.temporary_location_id != '02676066-4175-402e-884f-9bb1fc51fc2a'
+	or it.temporary_location_id is null) 
 /* not on reserve */
 group by
 	it.id,
