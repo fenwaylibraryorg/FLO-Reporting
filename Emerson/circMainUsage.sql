@@ -18,9 +18,9 @@ select counts as num_of_checkouts, count(1) as count_of_items
   left join folio_circulation.loan__t__ lt ON (it.id = lt.item_id)
   left join folio_inventory.location__t__ lt2 ON (lt2.id = hrt.permanent_location_id)
   left join folio_inventory.material_type__t__ mtt ON (it.material_type_id = mtt.id)
-where lt.loan_date between  start_date and end_date /*enter the start and end dates*/
-  and lt2.name LIKE 'Main Stacks'
-  and mtt.name LIKE 'Book' or mtt.name LIKE 'Juvenile Books'
+where (lt.loan_date between  start_date and end_date) /*enter the start and end dates*/
+  and (lt2.name LIKE 'Main Stacks')
+  and (mtt.name LIKE 'Book' or mtt.name LIKE 'Juvenile Books')
   group by it.id)
 group by counts
 order by counts
