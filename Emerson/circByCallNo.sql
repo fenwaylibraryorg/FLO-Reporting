@@ -27,9 +27,9 @@ left join folio_inventory.holdings_record__t hrt on
 left join folio_inventory.call_number_type__t cntt on
 	(hrt.call_number_type_id = cntt.id)
 where
-	lt2.loan_date between start_date and end_date
-	and cntt.name like 'Library of Congress%'
-	or cntt.name like 'LC%'
+	(lt2.loan_date between start_date and end_date)
+	and (cntt.name like 'Library of Congress%'
+	or cntt.name like 'LC%')
 group by
 	lt.name,
 	Lc_class
