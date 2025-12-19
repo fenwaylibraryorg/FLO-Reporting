@@ -26,7 +26,7 @@ left join folio_inventory.item__t it on
 left join folio_inventory.material_type__t mtt on
 	(it.material_type_id = mtt.id)
 where
-	(loan_date between start_date and end_date( /*enter month start and end dates*/
+	(loan_date between start_date and end_date) /*enter month start and end dates*/
 	and (lt.action like 'checkedout'
 	or lt.action like 'checkedOut%'
 	or lt.action like 'dueDate%'
