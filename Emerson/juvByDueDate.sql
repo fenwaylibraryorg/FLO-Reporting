@@ -14,8 +14,8 @@ LEFT JOIN folio_inventory.item__t it ON (it.id = lt2.item_id)
   LEFT JOIN folio_inventory.holdings_record__t hrt ON (it.holdings_record_id = hrt.id)
   LEFT JOIN folio_inventory.call_number_type__t cntt ON (hrt.call_number_type_id = cntt.id)
   LEFT JOIN folio_inventory.material_type__t mtt ON (mtt.id = it.material_type_id)
-WHERE mtt.name LIKE 'Juvenile Books'
-  AND cntt.name LIKE 'Library of Congress%' OR cntt.name LIKE 'LC%'
+WHERE (mtt.name LIKE 'Juvenile Books')
+  AND (cntt.name LIKE 'Library of Congress%' OR cntt.name LIKE 'LC%')
 GROUP BY Lc_area, lt2.due_date
 ORDER BY Lc_area, lt2.due_date
 $$
