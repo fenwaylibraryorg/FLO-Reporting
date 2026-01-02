@@ -3,7 +3,7 @@
 DROP FUNCTION IF EXISTS test;
 
 CREATE FUNCTION test(
-  item_barcode array
+  item_barcode text[]
 )
 RETURNS TABLE(
   instance_id uuid
