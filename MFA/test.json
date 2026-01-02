@@ -6,7 +6,7 @@
         {
             "name": "item_barcode",
             "displayName": "Item barcode list",
-            "type": "array",
+            "type": "text[]",
             "required": false
         }
     ]
