@@ -35,8 +35,10 @@ from
 where 
 	(li.loan_date::date between start_date and end_date)
 	and (li.item_effective_location_name_at_check_out like '%Reserve%')
-group by cct.name, instructor_name, li.barcode, ie.title, he.call_number, li.material_type_name
-order by course_name
+group by cct.name, jsonb_extract_path_text(jsonb_array_elements(jsonb_extract_path(cc.jsonb,
+	'instructorObjects')),
+	'name'), li.barcode, ie.title, he.call_number, li.material_type_name
+order by cct.name
 $$
 LANGUAGE SQL
 STABLE
