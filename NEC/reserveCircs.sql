@@ -33,7 +33,7 @@ from
   left join folio_courses.coursereserves_courselistings cc on (crt.course_listing_id::uuid = cc.id) 
   left join folio_courses.coursereserves_courses__t cct on (cct.course_listing_id::uuid = cc.id)
 where 
-	li.loan_date between start_date and end_date
+	li.loan_date::date between start_date and end_date
 	and li.item_effective_location_name_at_check_out like '%Reserve%'
 group by cct.name, instructor_name, li.barcode, ie.title, he.call_number, li.material_type_name
 order by course_name
