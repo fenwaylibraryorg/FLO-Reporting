@@ -25,7 +25,7 @@ from folio_circulation.loan__t lt
   left join folio_inventory.holdings_record__t hrt on (ie.holdings_record_id = hrt.id)
   left join folio_inventory.instance__t it2 on (hrt.instance_id = it2.id)
 where start_date <= ie.status_date::timestamptz  AND ie.status_date::timestamptz <= end_date
-  and ie.status_name LIKE 'Aged to lost'
+  and lt.item_status LIKE 'Aged to lost'
 order by ie.status_date desc
 $$
 LANGUAGE SQL
