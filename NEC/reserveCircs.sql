@@ -3,8 +3,8 @@
 DROP FUNCTION IF EXISTS reserveCircs;
 
 CREATE FUNCTION reserveCircs(  
-  start_date date DEFAULT '2000-01-01',
-  end_date date DEFAULT '2050-01-01')
+  loan_start date DEFAULT '2000-01-01',
+  loan_end date DEFAULT '2050-01-01')
 RETURNS TABLE(
   course_name text,
   instructor_name text,
@@ -33,7 +33,7 @@ from
   left join folio_courses.coursereserves_courselistings cc on (crt.course_listing_id::uuid = cc.id) 
   left join folio_courses.coursereserves_courses__t cct on (cct.course_listing_id::uuid = cc.id)
 where 
-	(li.loan_date::date between start_date and end_date)
+	(li.loan_date::date between loan_start and loan_end)
 	and (li.item_effective_location_name_at_check_out like '%Reserve%')
 group by cct.name, jsonb_extract_path_text(jsonb_array_elements(jsonb_extract_path(cc.jsonb,
 	'instructorObjects')),
