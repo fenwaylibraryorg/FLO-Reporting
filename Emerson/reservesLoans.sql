@@ -3,8 +3,8 @@
 DROP FUNCTION IF EXISTS reservesLoans;
 
 CREATE FUNCTION reservesLoans(    
-  start_date date DEFAULT '2000-01-01',
-  end_date date DEFAULT '2050-01-01')
+  loan_start date DEFAULT '2000-01-01',
+  loan_end date DEFAULT '2050-01-01')
 RETURNS TABLE
   (material_type_name text,
   index_title text,
@@ -34,7 +34,7 @@ with inst_contributors as (
   select jsonb_extract_path_text(loan.jsonb, 'itemId') :: uuid as item_id, 
   count(*) as loans
   from folio_circulation.loan
-  where jsonb_extract_path_text(loan.jsonb, 'loanDate') :: date between start_date and end_date
+  where jsonb_extract_path_text(loan.jsonb, 'loanDate') :: date between loan_start and loan_end
   group by item_id
   ),
  course_reserves as (
