@@ -4,13 +4,13 @@
     "instructions": "Choose a start and end date for the loan period.",
     "parameters": [
         {
-            "name": "start_date",
+            "name": "loan_start",
             "displayName": "Earliest loan date",
             "type": "date",
             "required": false
         },
         {
-            "name": "end_date",
+            "name": "loan_end",
             "displayName": "Latest loan date",
             "type": "date",
             "required": false
