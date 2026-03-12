@@ -1,8 +1,8 @@
---metadb:function inHouse
+--metadb:function hourlyCirc
 
-DROP FUNCTION IF EXISTS hourlyCircML;
+DROP FUNCTION IF EXISTS hourlyCirc;
 
-CREATE FUNCTION hourlyCircML(  
+CREATE FUNCTION hourlyCirc(  
   start_date date DEFAULT '2000-01-01',
   end_date date DEFAULT '2050-01-01')
 RETURNS TABLE(
@@ -32,3 +32,4 @@ LANGUAGE SQL
 STABLE
 
 PARALLEL SAFE;
+
