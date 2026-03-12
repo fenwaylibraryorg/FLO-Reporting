@@ -1,0 +1,19 @@
+{
+    "displayName": "Hourly Circ Counts Sherrill Library",
+    "description": "Print circulation counts by day and hour ",
+    "instructions": "Choose a start and end date for circulation period.",
+    "parameters": [
+        {
+            "name": "start_date",
+            "displayName": "Earliest date of circulation period",
+            "type": "date",
+            "required": false
+        },
+        {
+            "name": "end_date",
+            "displayName": "Latest date of circulation period",
+            "type": "date",
+            "required": false
+        }
+    ]
+}
