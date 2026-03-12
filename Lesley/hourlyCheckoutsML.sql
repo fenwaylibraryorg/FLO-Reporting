@@ -1,8 +1,8 @@
 --metadb:function inHouse
 
-DROP FUNCTION IF EXISTS hourlyCirc;
+DROP FUNCTION IF EXISTS hourlyCircML;
 
-CREATE FUNCTION hourlyCirc(  
+CREATE FUNCTION hourlyCircML(  
   start_date date DEFAULT '2000-01-01',
   end_date date DEFAULT '2050-01-01')
 RETURNS TABLE(
@@ -30,4 +30,5 @@ order by extract(DOW from loan_date AT TIME ZONE 'America/New_York'), extract(ho
 $$
 LANGUAGE SQL
 STABLE
+
 PARALLEL SAFE;
