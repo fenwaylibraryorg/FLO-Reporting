@@ -16,7 +16,7 @@ select lt3.name as library_name,
   TO_CHAR(lt.loan_date AT TIME ZONE 'America/New_York','DY') as circ_day,
   TO_CHAR(lt.loan_date AT TIME ZONE 'America/New_York', 'FMHH12 am') as circ_hour,
 	count(distinct lt.id) as circ_count
-from folio_circulation.loan__t lt
+from folio_circulation.loan__t__ lt
 left join folio_inventory.item__t it on (it.id = lt.item_id)
 left join folio_inventory.material_type__t mtt on (mtt.id = it.material_type_id)
 left join folio_inventory.location__t lt2 on (it.effective_location_id = lt2.id)
