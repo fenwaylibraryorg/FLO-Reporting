@@ -1,7 +1,7 @@
 {
     "displayName": "Course reserves by course number and instructor",
     "description": "Course reserves by course number and instructor",
-    "instructions": "Enter a course number and an instructor's full name",
+    "instructions": "Enter a course number and an instructor's full name. You can also search for partial course codes/instructor names using the '%parameter%' syntax (example %Knowles%). Quotations not needed.",
     "parameters": [
         {
             "name": "course_num",
