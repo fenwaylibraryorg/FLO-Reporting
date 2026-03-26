@@ -3,8 +3,8 @@
 DROP FUNCTION IF EXISTS reservesByNum;
 
 CREATE FUNCTION reservesByNum(
-    course_num text DEFAULT '',
-    instructor_name text DEFAULT '')
+    course_num text DEFAULT '%%',
+    instructor_name text DEFAULT '%%')
 RETURNS TABLE(
   course_number text,
   section_name text,
@@ -41,7 +41,7 @@ left join folio_derived.holdings_ext he on
   (he.holdings_id = ie.holdings_record_id)
 left join folio_derived.instance_ext ie2 on 
   (ie2.instance_id = he.instance_id) 
-where cct.course_number = course_num and cit.name = instructor_name
+where cct.course_number like course_num and cit.name like instructor_name
 order by cct.course_number, cct.section_name, instructor, ie2.title
 $$
 LANGUAGE SQL
