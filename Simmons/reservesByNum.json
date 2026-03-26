@@ -1,0 +1,19 @@
+{
+    "displayName": "Course reserves by course number and instructor",
+    "description": "Course reserves by course number and instructor",
+    "instructions": "Enter a course number and an instructor's full name",
+    "parameters": [
+        {
+            "name": "course_num",
+            "displayName": "Course Number/Code",
+            "type": "text",
+            "required": false
+        },
+              {
+            "name": "instructor_name",
+            "displayName": "Instructor Full Name",
+            "type": "text",
+            "required": false
+        }
+    ]
+}
