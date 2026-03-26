@@ -1,6 +1,6 @@
 {
     "displayName": "Course reserves by course number and instructor",
-    "description": "Course reserves by course number and instructor,
+    "description": "Course reserves by course number and instructor",
     "instructions": "Enter a course number and an instructor's full name",
     "parameters": [
         {
