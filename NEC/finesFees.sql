@@ -10,7 +10,7 @@ RETURNS TABLE(
   email text,
   patron_barcode text,
   fee_fine_type text,
-  account_balance integer,
+  account_balance money,
   item_barcode text
   )
 AS $$
