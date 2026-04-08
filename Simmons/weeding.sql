@@ -71,7 +71,7 @@ select
   left join inst_contributors ic2 on (i.id = ic2.instance_id) 
   left join inst_isbn isbn on (isbn.instance_id = i.id) 
   left join folio_derived.loans_items li on (li.item_id = ie.item_id) 
-    where (ie.effective_location_name like shelving_location) 
+    where (ie.effective_location_name ilike shelving_location) 
 group by ie.effective_location_name, i.title, ic2.contributor_name, isr.series, ied.edition, isbn.isbn, ie.barcode, ie.effective_call_number, ie.item_id, 
   ie.status_name, tl.loans, i2.effective_shelving_order, tl.renewal_count
   order by i2.effective_shelving_order
