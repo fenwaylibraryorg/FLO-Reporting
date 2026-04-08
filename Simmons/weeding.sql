@@ -4,7 +4,7 @@ DROP FUNCTION IF EXISTS weeding;
 
 CREATE FUNCTION weeding(
     start_loan_date date DEFAULT '2000-01-01',
-    end__loan_date date DEFAULT '2050-01-01',
+    end_loan_date date DEFAULT '2050-01-01',
     shelving_location text DEFAULT '%%')
 RETURNS TABLE(
   effective_location_name text,
