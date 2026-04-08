@@ -21,6 +21,7 @@ RETURNS TABLE(
   total_checkouts integer,
   total_renewals integer
   )
+AS $$
   with 
   total_loans as
   (
@@ -74,4 +75,7 @@ select
 group by ie.effective_location_name, i.title, ic2.contributor_name, isr.series, ied.edition, isbn.isbn, ie.barcode, ie.effective_call_number, ie.item_id, 
   ie.status_name, tl.loans, i2.effective_shelving_order, tl.renewal_count
   order by i2.effective_shelving_order
-AS $$
+$$
+LANGUAGE SQL
+STABLE
+PARALLEL SAFE;
