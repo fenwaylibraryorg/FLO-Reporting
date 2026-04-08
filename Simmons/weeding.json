@@ -5,13 +5,13 @@
     "parameters": [
         {
             "name": "start_loan_date",
-            "displayName": "Earliest date of item creation",
+            "displayName": "Earliest loan date",
             "type": "date",
             "required": false
         },
         {
             "name": "end_loan_date",
-            "displayName": "Latest date of item creation",
+            "displayName": "Latest loan date",
             "type": "date",
             "required": false
         },
