@@ -1,0 +1,25 @@
+{
+    "displayName": "Weeding Report (with circ and renewal counts)",
+    "description": "Weeding Report (with circ and renewal counts)",
+    "instructions": "Plug in a shelving location and date range to get circ stats",
+    "parameters": [
+        {
+            "name": "start_loan_date",
+            "displayName": "Earliest date of item creation",
+            "type": "date",
+            "required": false
+        },
+        {
+            "name": "end_loan_date",
+            "displayName": "Latest date of item creation",
+            "type": "date",
+            "required": false
+        },
+              {
+            "name": "shelving_location",
+            "displayName": "Shelving Location",
+            "type": "text",
+            "required": false
+        }
+    ]
+}
