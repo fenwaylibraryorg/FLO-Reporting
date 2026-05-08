@@ -12,19 +12,18 @@ RETURNS TABLE
   user_barcode text,
   balance text)
 AS $$
-select
-	ug.group_name as user_group,
-	ug.user_last_name as last_name,
-	ug.user_first_name as first_name,
-	ug.user_email as user_email,
+select 
+	ug.group_name as "Patron Group",
+	ug.user_last_name as "Last Name",
+	ug.user_first_name as "First Name",
+	ug.user_email as "Email",
 	ug.username,
-	ug.barcode as user_barcode,
-	concat('$', sum(faa.account_balance)) as balance
+	ug.barcode as "Patron Barcode",
+	concat('$', sum(at2.remaining)) as "Balance Owed"
 from
 	folio_derived.users_groups ug
-left join folio_derived.feesfines_accounts_actions faa on
-	(ug.user_id = faa.user_id)
-where faa.fine_status = 'Open'
+inner join folio_feesfines.accounts__t at2 on ug.user_id=at2.user_id
+where at2.remaining>0 
 group by
 	ug.group_name,
 	ug.user_last_name,
@@ -33,10 +32,10 @@ group by
 	ug.username,
 	ug.barcode
 having
-	sum(faa.account_balance) >= 20
+	sum(at2.remaining) >= 20
 order by
 	ug.group_name,
-	sum(faa.account_balance) desc
+	sum(at2.remaining) desc
 $$
 LANGUAGE SQL
 STABLE
