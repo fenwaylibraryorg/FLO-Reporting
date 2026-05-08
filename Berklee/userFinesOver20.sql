@@ -24,6 +24,7 @@ from
 	folio_derived.users_groups ug
 left join folio_derived.feesfines_accounts_actions faa on
 	(ug.user_id = faa.user_id)
+where faa.fine_status = 'Open'
 group by
 	ug.group_name,
 	ug.user_last_name,
