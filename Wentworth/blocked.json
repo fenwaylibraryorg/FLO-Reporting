@@ -1,6 +1,6 @@
 {
     "displayName": "List users that meet the Wentworth block criteria",
-    "description": "Test",
-    "instructions": "Test",
+    "description": "This report finds patrons in the Wentworth system that meet the block criteria, not necessarily patrons that currently have a block",
+    "instructions": "This report finds patrons in the Wentworth system that meet the block criteria, not necessarily patrons that currently have a block",
     "parameters": []
 }
