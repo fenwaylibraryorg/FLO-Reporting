@@ -1,0 +1,19 @@
+{
+    "displayName": "Valencia User Checkouts by Title",
+    "description": "Valencia User Checkouts by Title",
+    "instructions": "Enter a User Group",
+    "parameters": [
+        {
+            "name": "bcm_group",
+            "displayName": "User Group",
+            "type": "text",
+            "required": true
+        },
+              {
+            "name": "orientation_date",
+            "displayName": "Pick first day of orientatation of current semestere",
+            "type": "date",
+            "required": false
+        }
+    ]
+}
