@@ -1,6 +1,6 @@
 {
-    "displayName": "Valencia User Checkouts by Title",
-    "description": "Valencia User Checkouts by Title",
+    "displayName": "Valencia user checkouts by title",
+    "description": "Valencia user checkouts by title",
     "instructions": "Enter a User Group (if left blank, defaults to Student)",
     "parameters": [
         {
