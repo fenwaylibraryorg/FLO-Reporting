@@ -11,7 +11,7 @@
         },
               {
             "name": "orientation_date",
-            "displayName": "Pick first day of orientatation of current semestere",
+            "displayName": "Pick first day of orientatation of current semester",
             "type": "date",
             "required": false
         }
