@@ -1,11 +1,11 @@
 {
     "displayName": "Valencia User Checkouts by Title",
     "description": "Valencia User Checkouts by Title",
-    "instructions": "Enter a User Group",
+    "instructions": "Enter a User Group (if left blank, defaults to Student)",
     "parameters": [
         {
             "name": "bcm_group",
-            "displayName": "User Group",
+            "displayName": "User Group (for Student, leave blank)",
             "type": "text",
             "required": false
         },
