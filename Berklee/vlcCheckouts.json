@@ -7,7 +7,7 @@
             "name": "bcm_group",
             "displayName": "User Group",
             "type": "text",
-            "required": true
+            "required": false
         },
               {
             "name": "orientation_date",
