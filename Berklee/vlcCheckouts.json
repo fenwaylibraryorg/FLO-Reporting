@@ -5,7 +5,7 @@
     "parameters": [
         {
             "name": "bcm_group",
-            "displayName": "User Group (for Student, leave blank)",
+            "displayName": "User Group (Options: Student, Graduate Student, etc.)",
             "type": "text",
             "required": false
         },
