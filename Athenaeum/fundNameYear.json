@@ -1,7 +1,7 @@
 {
     "displayName": "Titles by fund name and/or fund year",
     "description": "A list of titles purchased with a specific fund and/or within a fiscal year",
-    "instructions": "Plug in a fund name and/or a fund year (ex. Oct/Sept 2025/26)",
+    "instructions": "Plug in a fund name and/or a fund year (ex. Oct/Sept 2025/26). Note: You can use a wildcard search if you don't want to spell out the full name (ex. "William%" for "William, Alexander")",
     "parameters": [
         {
             "name": "fnd_name",
