@@ -1,0 +1,13 @@
+{
+    "displayName": "PKS Records",
+    "description": "Records with a 'pks' prefix in the 035 field",
+    "instructions": "Plug in a shelving location of leave blank to see all records",
+    "parameters": [
+        {
+            "name": "shelving_location",
+            "displayName": "Shelving Location",
+            "type": "text",
+            "required": false
+        }
+    ]
+}
