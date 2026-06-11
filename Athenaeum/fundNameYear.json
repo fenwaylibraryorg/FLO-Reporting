@@ -10,7 +10,7 @@
             "required": false
         },
       {
-            "name": "fnd_year"
+            "name": "fnd_year",
             "displayName": "Fund Year",
             "type": "text",
             "required": false
