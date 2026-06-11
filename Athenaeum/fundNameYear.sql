@@ -3,8 +3,8 @@
 DROP FUNCTION IF EXISTS fundNameYear;
 
 CREATE FUNCTION fundNameYear(
-    fnd_name text DEFAULT '',
-    fnd_year text DEFAULT ''
+    fnd_name text DEFAULT '%%',
+    fnd_year text DEFAULT '%%'
   )
 RETURNS TABLE(
   hrid text,
