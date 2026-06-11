@@ -1,7 +1,7 @@
 {
     "displayName": "PKS Records",
     "description": "Records with a 'pks' prefix in the 035 field",
-    "instructions": "Plug in a shelving location of leave blank to see all records",
+    "instructions": "Plug in a shelving location of leave blank to see all records. Location options: Adams, Confederate Imprints, Cutter, Cutter Rare, Cutter Rare Map, Cutter-Not, Manuscripts (Mss.), Off-Site Storage, Off-Site Storage Boxes, Rare (LC), TBMR, Tract, Vershbow, Washington, Washingtoniana",
     "parameters": [
         {
             "name": "shelving_location",
