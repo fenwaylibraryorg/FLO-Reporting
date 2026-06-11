@@ -41,7 +41,7 @@ left join folio_inventory.holdings_record__t hd on (ist.id = hd.instance_id)
 left join inst_contributors cb on (cb.instance_id = ist.id) 
 inner join fund_name fn on (fn.holding_id = hd.id) 
 inner join fund_year fy on (fy.holding_id = hd.id) 
-where fn.note = fnd_name and fy.note = fnd_year 
+where fn.note ilike fnd_name and fy.note ilike fnd_year 
 order by fy.note, fn.note
 $$
 LANGUAGE SQL
