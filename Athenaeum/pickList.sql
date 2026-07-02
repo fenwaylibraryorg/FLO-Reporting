@@ -3,8 +3,8 @@
 DROP FUNCTION IF EXISTS pickList;
 
 CREATE FUNCTION pickList(    
-  start_page_date date DEFAULT '2000-01-01',
-  end_page_date date DEFAULT '2050-01-01')
+  start_page_date timestamp DEFAULT '2000-01-01',
+  end_page_date timestamp DEFAULT '2050-01-01')
 RETURNS TABLE
   (request_date timestamp,
   user_last_name text,
@@ -48,7 +48,7 @@ left join folio_inventory.item__t it2 on (rt.item_id = it2.id)
 inner join folio_inventory.item i on (it2.id = i.id)
 left join folio_inventory.holdings_record__t hrt on (rt.holdings_record_id = hrt.id) 
 left join folio_inventory.location__t lt on (it2.effective_location_id = lt.id) 
-where rt.request_type = 'Page' and rt.status = 'Open - Not yet filled' and (request_date AT TIME ZONE 'America/New_York')::date Between start_page_date and end_page_date
+where rt.request_type = 'Page' and rt.status = 'Open - Not yet filled' and (request_date AT TIME ZONE 'America/New_York') Between start_page_date and end_page_date
 order by lt.name, i.jsonb->>'effectiveShelvingOrder' asc
 $$
 LANGUAGE SQL
