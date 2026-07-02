@@ -6,11 +6,11 @@ CREATE FUNCTION pickList(
   start_page_date date DEFAULT '2000-01-01',
   end_page_date date DEFAULT '2050-01-01')
 RETURNS TABLE
-  (request_date date,
+  (request_date timestamp,
   user_last_name text,
   user_first_name text,
   user_middle_name text, 
-  page_expires date,
+  page_expires timestamp,
   title text,
   contributor_name text,
   effective_shelving_location text,
@@ -26,11 +26,11 @@ with inst_contributors as (
   group by ic.instance_id,ic.contributor_name
   )
 select 
-  (request_date AT TIME ZONE 'America/New_York')::date AS request_date,
+  (request_date AT TIME ZONE 'America/New_York') AS request_date,
   jsonb_extract_path_text(ut.jsonb, 'personal', 'lastName') AS user_last_name,
   jsonb_extract_path_text(ut.jsonb, 'personal', 'firstName') AS user_first_name,
   jsonb_extract_path_text(ut.jsonb, 'personal', 'middleName') AS user_middle_name,
-  (rt.request_expiration_date AT TIME ZONE 'America/New_York')::date AS page_expires,
+  (rt.request_expiration_date AT TIME ZONE 'America/New_York') AS page_expires,
   it.title,
   ic2.contributor_name,
   lt.name as effective_shelving_location,
