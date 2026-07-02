@@ -4,7 +4,7 @@ DROP FUNCTION IF EXISTS pickList;
 
 CREATE FUNCTION pickList(    
   start_page_date date DEFAULT '2000-01-01',
-  end__page_date date DEFAULT '2050-01-01')
+  end_page_date date DEFAULT '2050-01-01')
 RETURNS TABLE
   (request_date date,
   user_last_name text,
