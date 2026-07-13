@@ -1,0 +1,19 @@
+{
+    "displayName": "Basic Item Report (by location and/or call number)",
+    "description": "A basic list of items ordered by library, location, and call number. Filterable by location and/or call number.",
+    "instructions": "Plug in a shelving location and/or call number",
+    "parameters": [
+        {
+            "name": "shelving_location",
+            "displayName": "Shelving Location",
+            "type": "text",
+            "required": false
+        },
+      {
+            "name": "call_no",
+            "displayName": "Call Number",
+            "type": "text",
+            "required": false
+      }
+    ]
+}
