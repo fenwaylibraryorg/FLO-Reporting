@@ -55,7 +55,7 @@ and requests >= 1
 and it2.volume is NULL
 and it2.enumeration is NULL
 and it2.chronology is NULL
-order by hrid, rt.position
+order by it.hrid, rt.position
 $$
 LANGUAGE SQL
 STABLE
