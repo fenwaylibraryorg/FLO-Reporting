@@ -65,7 +65,6 @@ select distinct
   it.id as instance_uuid,
   'https://catalog.berklee.edu/Record/' || it.hrid as opac_link,
   ie.status_name as item_status,
-  ie.material_type_name,
   it.discovery_suppress as instance_opac_suppressed,
   it.staff_suppress as instance_staff_suppressed, 
   hrt.discovery_suppress as holdings_suppressed,
