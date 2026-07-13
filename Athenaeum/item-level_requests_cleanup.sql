@@ -4,7 +4,7 @@ DROP FUNCTION IF EXISTS itemRequest;
 
 CREATE FUNCTION itemRequest()
 RETURNS TABLE(
-    instance_hrid integer,
+    instance_hrid text,
     title text,
     request_date timestamptz,
     queue_position integer,
