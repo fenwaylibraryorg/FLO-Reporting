@@ -1,5 +1,4 @@
 --metadb:function itemRequest
---7-13-2026 query item-level requests on records w/ multiple copies to cancel and convert to title-level requests
 
 DROP FUNCTION IF EXISTS itemRequest;
 
