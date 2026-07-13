@@ -10,7 +10,7 @@ RETURNS TABLE(
     queue_position integer,
     patron_last_name text,
     patron_first_name text,
-    request_link url,
+    request_link text,
     request_type text,
     total_requests_on_record integer,
     total_items_on_record integer
