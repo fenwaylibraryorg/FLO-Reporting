@@ -4,7 +4,7 @@ DROP FUNCTION IF EXISTS basicItem;
 
 CREATE FUNCTION basicItem(
     shelving_location text DEFAULT '%%',
-    call_no text DEFAULT '%%'
+    call_no text DEFAULT '.*'
   )
 RETURNS TABLE(
   library_name text,
