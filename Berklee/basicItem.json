@@ -5,7 +5,7 @@
     "parameters": [
         {
             "name": "shelving_location",
-            "displayName": "Shelving Location (Note: You can use a wildcard search if you don't want to spell out the full name (ex. Alphin Main% for Alphin Main Room))",
+            "displayName": "Shelving Location (Note: You can use a wildcard search (case-insensitive) if you don't want to spell out the full name (ex. Alphin Main% for Alphin Main Room))",
             "type": "text",
             "required": false
         },
