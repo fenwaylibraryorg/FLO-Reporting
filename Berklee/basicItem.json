@@ -11,7 +11,7 @@
         },
       {
             "name": "call_no",
-            "displayName": "Call Number (Note: Please use a regex search (ex. ^mp for call numbers beginning with MP)",
+            "displayName": "Call Number (Note: Please use a regex search (ex. ^mp for call numbers beginning with MP, case-insensitive))",
             "type": "text",
             "required": false
       }
