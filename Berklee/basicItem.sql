@@ -25,7 +25,6 @@ RETURNS TABLE(
   instance_uuid uuid,
   opac_link text,
   item_status text,
-  material_type_name text,
   instance_opac_suppressed bool,
   instance_staff_suppressed bool,
   holdings_suppressed bool,
