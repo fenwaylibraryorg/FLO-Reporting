@@ -80,7 +80,6 @@ left join inst_isbn isbn on (isbn.instance_id = it.id)
 where 
   ((it.staff_suppress is false) 
   or (it.staff_suppress is null))
-  and (ie.status_name != 'Available')
   and (ie.effective_call_number ~* call_no)
   and (ie.effective_location_name ilike shelving_location)
 order by lib.name, ie.effective_location_name, ie.effective_call_number
