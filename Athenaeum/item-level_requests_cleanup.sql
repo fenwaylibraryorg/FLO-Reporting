@@ -56,6 +56,8 @@ and it2.volume is NULL
 and it2.enumeration is NULL
 and it2.chronology is NULL
 and rt.request_level like '%Item%'
+and rt.status not like '%Closed%'
+and rt.status not like '%Awaiting pickup%'
 order by it.hrid, rt.position
 $$
 LANGUAGE SQL
