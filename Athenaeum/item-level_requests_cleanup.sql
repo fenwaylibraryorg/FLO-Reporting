@@ -55,6 +55,7 @@ and requests >= 1
 and it2.volume is NULL
 and it2.enumeration is NULL
 and it2.chronology is NULL
+and rt.request_level like '%Item%'
 order by it.hrid, rt.position
 $$
 LANGUAGE SQL
