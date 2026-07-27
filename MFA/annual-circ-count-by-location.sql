@@ -1,4 +1,4 @@
---metadb:function itemRequest
+--metadb:function circCount
 
 
 DROP FUNCTION IF EXISTS circCount;
