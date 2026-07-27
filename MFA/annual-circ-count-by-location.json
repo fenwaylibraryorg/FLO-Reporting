@@ -6,13 +6,13 @@
         {
             "name": "start_date",
             "displayName": "Start Date",
-            "type": "timestamp",
+            "type": "date",
             "required": false
         },
         {
             "name": "end_date",
             "displayName": "End Date",
-            "type": "timestamp",
+            "type": "date",
             "required": false
         }
     ]
