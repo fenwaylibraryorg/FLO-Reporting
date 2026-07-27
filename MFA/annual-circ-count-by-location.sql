@@ -4,8 +4,8 @@
 DROP FUNCTION IF EXISTS circCount;
 
 CREATE FUNCTION circCount(  
-  start_date date DEFAULT '2000-01-01',
-  end_date date DEFAULT '2050-01-01')
+  start_date timestamp DEFAULT '2000-01-01 0:00:00+00',
+  end_date timestamp DEFAULT '2050-01-01 0:00:00+00')
 RETURNS TABLE(
   shelving_location text,
   circ_count integer
