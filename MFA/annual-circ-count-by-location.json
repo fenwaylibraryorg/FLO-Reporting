@@ -1,0 +1,19 @@
+{
+    "displayName": "Circulation Count by Shelving Location",
+    "description": "Created by JR 7-27-2026 - counts checkouts and renewals in a date range, grouped by item effective location at time of checkout",
+    "instructions": "Enter date range for circulation count.",
+    "parameters": [
+        {
+            "name": "start_date",
+            "displayName": "Start Date",
+            "type": "date",
+            "required": false
+        },
+        {
+            "name": "end_date",
+            "displayName": "End Date",
+            "type": "date",
+            "required": false
+        }
+    ]
+}
