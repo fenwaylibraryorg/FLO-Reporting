@@ -16,7 +16,7 @@ from folio_circulation.loan__ lt
 join folio_inventory.location__t lt2 ON ((lt.jsonb->>'itemEffectiveLocationIdAtCheckOut') :: uuid = lt2.id)
 where lt.jsonb->>'action' in ('checkedout','renewed','checkedOutThroughOverride', 'renewedThroughOverride')
 and (jsonb_extract_path_text(lt.jsonb, 'metadata', 'updatedDate' ) :: timestamp >= start_date
-and jsonb_extract_path_text(lt.jsonb, 'metadata', 'updatedDate' ) :: timestamp <= end_date)
+and jsonb_extract_path_text(lt.jsonb, 'metadata', 'updatedDate' ) :: timestamp <= end_date + INTERVAL '1 day')
 group by rollup(lt2.name)
 order by lt2.name nulls last
 $$
