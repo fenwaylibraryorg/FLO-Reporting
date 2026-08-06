@@ -6,7 +6,7 @@ CREATE FUNCTION itemRequest()
 RETURNS TABLE(
     instance_hrid text,
     title text,
-    request_date timestamptz,
+    request_date text,
     queue_position integer,
     patron_last_name text,
     patron_first_name text,
