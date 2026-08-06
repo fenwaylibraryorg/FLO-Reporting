@@ -10,9 +10,9 @@ RETURNS TABLE(
     title text,
     contributor_name text,
     call_number text,
-    date_acquired timestamptz,
+    date_acquired text,
     total_loans integer,
-    last_checkout timestamptz,
+    last_checkout text,
     sort_column text
   )
 AS $$
