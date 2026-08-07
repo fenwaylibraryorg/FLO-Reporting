@@ -11,7 +11,7 @@ RETURNS TABLE(
     contributor_name text,
     call_number text,
     date_acquired text,
-    total_loans integer,
+    total_folio_loans integer,
     voyager_historical_charges integer,
     last_checkout text,
     sort_column text
