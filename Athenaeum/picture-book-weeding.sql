@@ -47,9 +47,9 @@ select distinct it.hrid as instance_hrid,
   it.title,
   ic2.contributor_name,
   hrt.call_number as "call_number",
-  itn.acq_date as "date_acquired",
+  COALESCE(itn.acq_date :: date, (i.jsonb->'metadata'->>'createdDate') :: DATE) as "date_acquired",
   tl.loans as "total_folio_loans",
-  vl.voyager_total as "voyager_historical_charges",
+  vl.voyager_total as "voyager historical charges",
   tl.checkout as "last_checkout",
   i.jsonb->>'effectiveShelvingOrder' as sort_column
 from folio_inventory.instance__t__ it
@@ -60,7 +60,7 @@ left join item_note itn on (itn.id = it2.id)
 left join voyager_loans vl on (vl.id = it2.id)
 inner join folio_inventory.item i on (it2.id = i.id)
 inner join folio_inventory.location__t lt on (i.effectiveLocationId = lt.id)
-inner join total_loans tl on (tl.item_id = it2.id)
+left join total_loans tl on (tl.item_id = it2.id)
 where lt.name in ('Childpix')
 order by i.jsonb->>'effectiveShelvingOrder' asc
 $$
