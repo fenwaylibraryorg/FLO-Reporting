@@ -16,7 +16,8 @@ SELECT
 FROM folio_derived.item_ext ie
   LEFT JOIN folio_derived.holdings_ext he on (ie.holdings_record_id = he.holdings_id)
   LEFT JOIN folio_derived.instance_ext ie2 on (he.instance_id = ie2.instance_id)
-WHERE barcode LIKE 'ereserve%' ORDER BY barcode
+WHERE barcode LIKE 'ereserve%' ORDER BY barcode desc
+limit 10
   $$
 LANGUAGE SQL
 STABLE
