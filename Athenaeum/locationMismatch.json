@@ -1,0 +1,6 @@
+{
+    "displayName": "Holdings/Item Location Mismatch",
+    "description": "Displays records where the holdings permanent location does not match the item permanent location",
+    "instructions": "",
+    "parameters": []
+}
