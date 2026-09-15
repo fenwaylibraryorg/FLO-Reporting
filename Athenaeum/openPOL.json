@@ -1,0 +1,19 @@
+{
+    "displayName": "Open POLs",
+    "description": "Open purchase order lines with vendor and fund info by date range",
+    "instructions": "Choose a start and end date for the order period.",
+    "parameters": [
+        {
+            "name": "start_ordered_date",
+            "displayName": "Earliest order date",
+            "type": "date",
+            "required": false
+        },
+        {
+            "name": "end_ordered_date",
+            "displayName": "Latest order date",
+            "type": "date",
+            "required": false
+        }
+    ]
+}
