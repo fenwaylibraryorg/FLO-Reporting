@@ -1,7 +1,7 @@
 {
     "displayName": "Pick List by Date Range",
     "description": "Lists of unfilled pages within a date range",
-    "instructions": "Choose a start and end date for the request period. (Leave blank to return all open POLs).",
+    "instructions": "Choose a start and end date for the request period.",
     "parameters": [
         {
             "name": "start_page_date",
