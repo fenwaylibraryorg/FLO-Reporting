@@ -12,11 +12,11 @@ RETURNS TABLE(
     perm_location text,
     effective_location_name text,
     material_type_name text,
-    barcode text,
+    item_barcode text,
     instance text,
     user_last_name text,
     user_first_name text,
-    barcode text,
+    user_barcode text,
     status_name text,
     loan_date date,
     due_date date
@@ -32,9 +32,9 @@ with inst_contributors as (
   from folio_derived.instance_publication ip where ip.publication_ordinality='1'
   group by ip.instance_id, ip.publisher, ip.date_of_publication)
 select distinct it.title, ic2.contributor_name, ip2.publisher, ip2.date_of_publication,
-  ie.effective_call_number, lt.name as perm_location, ie.effective_location_name, ie.material_type_name, ie.barcode, 
+  ie.effective_call_number, lt.name as perm_location, ie.effective_location_name, ie.material_type_name, ie.barcode as item_barcode, 
   it.hrid as instance,
-  ug.user_last_name, ug.user_first_name, ug.barcode,
+  ug.user_last_name, ug.user_first_name, ug.barcode as user_barcode,
   ie.status_name, lt2.loan_date::date, lt2.due_date::date
 from folio_derived.item_ext ie
 left join folio_inventory.holdings_record__t hrt on (ie.holdings_record_id = hrt.id)
