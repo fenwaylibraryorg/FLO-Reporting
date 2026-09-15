@@ -1,7 +1,7 @@
 {
     "displayName": "Open POLs",
     "description": "Open purchase order lines with vendor and fund info by date range",
-    "instructions": "Choose a start and end date for the order period.",
+    "instructions": "Choose a start and end date for the order period. (Leave blank to return all open POLs).",
     "parameters": [
         {
             "name": "start_ordered_date",
