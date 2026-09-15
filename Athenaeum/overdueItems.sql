@@ -18,8 +18,8 @@ RETURNS TABLE(
     user_first_name text,
     user_barcode text,
     status_name text,
-    loan_date date,
-    due_date date
+    loan_date text,
+    due_date text
   )
 AS $$
 with inst_contributors as (
@@ -35,7 +35,7 @@ select distinct it.title, ic2.contributor_name, ip2.publisher, ip2.date_of_publi
   ie.effective_call_number, lt.name as perm_location, ie.effective_location_name, ie.material_type_name, ie.barcode as item_barcode, 
   it.hrid as instance,
   ug.user_last_name, ug.user_first_name, ug.barcode as user_barcode,
-  ie.status_name, lt2.loan_date::date, lt2.due_date::date
+  ie.status_name, lt2.loan_date::date::text, lt2.due_date::date::text
 from folio_derived.item_ext ie
 left join folio_inventory.holdings_record__t hrt on (ie.holdings_record_id = hrt.id)
 left join folio_inventory.location__t lt on (hrt.permanent_location_id = lt.id)
