@@ -45,7 +45,7 @@ left join inst_publishers ip2 on (it.id = ip2.instance_id)
 left join folio_circulation.loan__t lt2 ON (lt2.item_id = ie.item_id)
 left join folio_derived.users_groups ug ON (ug.user_id = lt2.user_id)
 where lt2.due_date AT TIME ZONE 'America/New_York' < CURRENT_DATE AT TIME ZONE 'America/New_York' /*due date is earlier than current day*/
-order by lt2.due_date::date
+order by lt2.due_date::date::text
 $$
 LANGUAGE SQL
 STABLE
