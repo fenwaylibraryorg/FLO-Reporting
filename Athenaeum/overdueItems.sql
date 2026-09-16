@@ -44,7 +44,8 @@ left join inst_contributors ic2 on (it.id = ic2.instance_id)
 left join inst_publishers ip2 on (it.id = ip2.instance_id) 
 left join folio_circulation.loan__t lt2 ON (lt2.item_id = ie.item_id)
 left join folio_derived.users_groups ug ON (ug.user_id = lt2.user_id)
-where lt2.due_date AT TIME ZONE 'America/New_York' < CURRENT_DATE AT TIME ZONE 'America/New_York' /*due date is earlier than current day*/
+left join folio_circulation.loan lm on (lm.id = lt2.id)
+where jsonb_extract_path_text(lm.jsonb, 'status', 'name') = 'Open' and lt2.due_date AT TIME ZONE 'America/New_York' < CURRENT_DATE AT TIME ZONE 'America/New_York' /*due date is earlier than current day*/
 order by lt2.due_date::date::text
 $$
 LANGUAGE SQL
