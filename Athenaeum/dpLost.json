@@ -1,6 +1,6 @@
 {
-    "displayName": "Declared Lost or Lost and Paid Items",
-    "description": "Includes all declared lost or paid and lost items with their loan information (when available)",
+    "displayName": "Declared Lost and Lost and Paid Items",
+    "description": "Includes all declared lost and paid and lost items with their loan information (when available)",
     "instructions": "",
     "parameters": []
 }
