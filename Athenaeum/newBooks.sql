@@ -38,7 +38,7 @@ inner join folio_inventory.holdings_record__t hrt on (hrt.instance_id = it.id)
 inner join folio_inventory.item__t it2 on (it2.holdings_record_id = hrt.id)
 left join inst_contributors ic2 on (it.id = ic2.instance_id)
 inner join folio_derived.instance_publication ip on (ip.instance_id = it.id)
-inner join folio_inventory.location__t lt on (i.effectiveLocationId = lt.id)
+inner join folio_inventory.location__t lt on (it2.effective_location_id = lt.id)
 where lt.name in ('New Book (14 Days)', 'New Book (28 Days)', 'New Books')
 and ip.publication_ordinality = '1'
 order by lt.name, it2.effective_shelving_order asc
