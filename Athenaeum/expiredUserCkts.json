@@ -1,0 +1,6 @@
+{
+    "displayName": "Expired users (2 weeks or more) with checkouts",
+    "description": "All users that have expired 2 or more weeks ago with checkouts",
+    "instructions": "",
+    "parameters": []
+}
