@@ -1,0 +1,19 @@
+{
+    "displayName": "Users with checkouts by user expiration date range",
+    "description": "Lists users with checkouts within a user expiration date range",
+    "instructions": "Choose a start and end date for the user expiration period.",
+    "parameters": [
+        {
+            "name": "start_exp_date",
+            "displayName": "Earliest user expiration date",
+            "type": "date",
+            "required": false
+        },
+        {
+            "name": "end_exp_date",
+            "displayName": "Latest user expiration date",
+            "type": "date",
+            "required": false
+        }
+    ]
+}
