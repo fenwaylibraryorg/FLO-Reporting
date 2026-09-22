@@ -1,0 +1,19 @@
+{
+    "displayName": "Top 20 Circs (with date range)",
+    "description": "Top 20 most checked out items within a specified loan period",
+    "instructions": "Choose a start and end date for the loan period.",
+    "parameters": [
+        {
+            "name": "start_loan_date",
+            "displayName": "Earliest checkout date",
+            "type": "date",
+            "required": false
+        },
+        {
+            "name": "end_loan_date",
+            "displayName": "Latest checkout date",
+            "type": "date",
+            "required": false
+        }
+    ]
+}
