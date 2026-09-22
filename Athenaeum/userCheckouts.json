@@ -1,0 +1,6 @@
+{
+    "displayName": "All users with items checked out",
+    "description": "All users with items checked out (includes item and loan info)",
+    "instructions": "",
+    "parameters": []
+}
