@@ -1,6 +1,6 @@
 {
     "displayName": "Shelflist by call number range",
-    "description": "Shelflist by call number range with loan info and count of items per instance/bib. The "overall loans" column includes Millennium and FOLIO checkouts.",
+    "description": "Shelflist by call number range with loan info and count of items per instance/bib. The 'overall loans' column includes Millennium and FOLIO checkouts.",
     "instructions": "Enter a call number range (ex. B to BZ)",
     "parameters": [
         {
