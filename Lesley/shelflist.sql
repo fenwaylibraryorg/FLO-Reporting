@@ -19,7 +19,7 @@ with inst_contributors as (
   from folio_derived.instance_contributors ic where ic.contributor_is_primary='TRUE'
   group by ic.instance_id,ic.contributor_name
   )
-select 
+select distinct
   it.title, 
   ie.barcode, 
   ie.copy_number,
