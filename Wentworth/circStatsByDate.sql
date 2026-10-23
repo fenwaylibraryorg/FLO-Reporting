@@ -10,19 +10,34 @@ RETURNS TABLE
   effective_shelving_order text,
   call_number text,
   enumeration_data text,
-  shelving_location text,
-  action text,
-  count integer)
+  barcode text, 
+  loans integer)
 AS $$
-SELECT it.title, it2.effective_shelving_order, hrt.call_number, COALESCE(it2.enumeration, it2.chronology, it2.volume) AS enumeration_data, lt.name as shelving_location, lt2.action, COUNT (DISTINCT lt2.loan_date) 
-FROM folio_inventory.instance__t it
-LEFT JOIN folio_inventory.holdings_record__t hrt ON (hrt.instance_id = it.id)
-LEFT JOIN folio_inventory.item__t it2 ON (it2.holdings_record_id = hrt.id)
-LEFT JOIN folio_circulation.loan__t__ lt2 ON (lt2.item_id = it2.id)
-LEFT JOIN folio_inventory.location__t lt ON (lt.id = lt2.item_effective_location_id_at_check_out)
-WHERE start_date <= lt2.loan_date  AND lt2.loan_date < end_date
-AND lt2.action = 'checkedout'
-GROUP BY lt2.item_id, it.title, it2.effective_shelving_order, hrt.call_number, enumeration_data, lt.name, lt2.item_status, lt2.action
+with total_loans as
+  (
+  select jsonb_extract_path_text(loan.jsonb, 'itemId') :: uuid as item_id, 
+  count(*) as loans
+  from folio_circulation.loan
+  where jsonb_extract_path_text(loan.jsonb, 'loanDate') ::date between start_date and end_date
+  group by item_id
+  )
+select
+	it.title,
+	it2.effective_shelving_order,
+	hrt.call_number,
+	coalesce(it2.enumeration,
+	it2.chronology,
+	it2.volume) as enumeration_data,
+    it2.barcode,
+	tl.loans
+from
+	folio_inventory.instance__t it
+left join folio_inventory.holdings_record__t hrt on
+	(hrt.instance_id = it.id)
+left join folio_inventory.item__t it2 on
+	(it2.holdings_record_id = hrt.id)
+inner join total_loans tl on (tl.item_id = it2.id)
+order by tl.loans desc, it2.effective_shelving_order
   $$
 LANGUAGE SQL
 STABLE
