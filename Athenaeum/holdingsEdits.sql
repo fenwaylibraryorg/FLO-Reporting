@@ -18,6 +18,7 @@ RETURNS TABLE(
   perm_holdings_location text,
   temp_holdings_location text,
   statistical_code text,
+  statistical_code_name text, 
   create_date_holdings text,
   create_staff_holdings text 
   )
