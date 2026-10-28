@@ -1,0 +1,25 @@
+{
+    "displayName": "Instance Edits by Date Range",
+    "description": "Shows all instance edits made within a date range with staff info",
+    "instructions": "Enter a date range to see all edits made within that range. Filtering by updating staff is optional",
+    "parameters": [
+        {
+            "name": "update_user",
+            "displayName": "Staff Username (Optional - leave blank to see all staff edits)",
+            "type": "text",
+            "required": false
+        },
+        {
+            "name": "start_update_date",
+            "displayName": "Earliest instance update date",
+            "type": "date",
+            "required": true
+        },
+        {
+            "name": "end_update_date",
+            "displayName": "Latest instance update date",
+            "type": "date",
+            "required": true 
+        }
+    ]
+}
