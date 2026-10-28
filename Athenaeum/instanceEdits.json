@@ -1,5 +1,5 @@
 {
-    "displayName": "Cataloging audit - Instance Edits by Date Range",
+    "displayName": "Cataloging Audit - Instance Edits by Date Range",
     "description": "Shows all instance edits made within a date range with staff info",
     "instructions": "Enter a date range to see all edits made within that range. Filtering by updating staff is optional",
     "parameters": [
