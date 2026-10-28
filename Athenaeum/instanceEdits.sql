@@ -7,7 +7,7 @@ CREATE FUNCTION instanceEdits(
   start_update_date date DEFAULT '2000-01-01',
   end_update_date date DEFAULT '2050-01-01')
 RETURNS TABLE(
-  update_date_instance date,
+  update_date_instance text,
   update_staff_instance text,
   hrid text,
   deleted boolean,
@@ -15,7 +15,7 @@ RETURNS TABLE(
   title text,
   cataloged_date text,
   discovery_suppress boolean,
-  create_date_instance date,
+  create_date_instance text,
   create_staff_instance text 
   )
 AS $$
