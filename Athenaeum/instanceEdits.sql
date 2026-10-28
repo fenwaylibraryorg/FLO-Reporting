@@ -22,7 +22,7 @@ AS $$
 select
 	jsonb_extract_path_text(i.jsonb,
 	'metadata',
-	'updatedDate')::date as update_date_instance,
+	'updatedDate')::date::text as update_date_instance,
 	uuin.username as update_staff_instance,
 	it.hrid,
 	it.deleted,
@@ -32,7 +32,7 @@ select
 	it.discovery_suppress,
 	jsonb_extract_path_text(i.jsonb,
 	'metadata',
-	'createdDate')::date as create_date_instance,
+	'createdDate')::date::text as create_date_instance,
 	cuin.username as create_staff_instance
 from
 	folio_inventory.instance__t it
