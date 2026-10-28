@@ -105,7 +105,7 @@ where
 		'metadata',
 		'updatedDate')::date between start_update_date and end_update_date))
 	and (uuit.username not in ('circstaff', 'membership', 'poremski', 'ha', 'morini', 'omeara', 'system-ncip', 'flo-api', 'owilson@bostonathenaeum.org', 'id_admin', 'lobrutto', 'warnement', 'id_vufind_systemuser'))
-    and (uuit.username = update_user) 
+    and (uuit.username like update_user) 
 order by
 	jsonb_extract_path_text(i2.jsonb,
 	'metadata',
