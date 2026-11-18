@@ -1,6 +1,6 @@
 {
-    "displayName": "Top 20 Circs (with date range)",
-    "description": "Top 20 most checked out items within a specified loan period",
+    "displayName": "Top 50 Circs (with date range)",
+    "description": "Top 50 most checked out items within a specified loan period",
     "instructions": "Choose a start and end date for the loan period.",
     "parameters": [
         {
