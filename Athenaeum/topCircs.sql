@@ -48,7 +48,7 @@ inner join inst_contributors ic2 on (it.id = ic2.instance_id)
 inner join total_loans tl on (tl.item_id = it2.id)
 where tl.loans is not null
 order by tl.loans desc
-limit 20
+limit 50
 $$
 LANGUAGE SQL
 STABLE
